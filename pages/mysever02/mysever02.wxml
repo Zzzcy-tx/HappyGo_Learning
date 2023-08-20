@@ -1,0 +1,13 @@
+<view>
+  <text class="top">申请须知</text>
+  <text>本平台是专门为回收废弃物服务的</text>
+</view>
+<view>
+  <text class="top">帮忙须知</text>
+  <text>1.有责任心，尽心尽责，确保快递不丢件。</text>
+  <text>2.有时间观念，尽可能的准时到达，如果到达不了，要提前电话告知。</text>
+  <text>3.将垃圾放置到指定的地点。</text>
+  <text>4.如果遇到接收不了的东西时，需要及时反馈给小程序里的客服。</text>
+  <text>5.垃圾送到之后要联系客服。</text>
+</view>
+<button type="primary" bindtap="toHelper">我要申请</button>

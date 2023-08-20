@@ -1,0 +1,59 @@
+<!--pages/huowuxinxi/huowuxinxi.json.wxml-->
+<view style="border-bottom:1px #ccc solid;margin-left: 30rpx;margin-right: 30rpx;"></view>
+<view class="service01">
+  <!--<view wx:if="{{test}}">
+    <text>我的地址:</text>
+    <text bindtap="goShouhuodizhi" class="shouhuodizhi">点击选择收货地址 　 　　　></text>
+  </view>
+  <view class="top" wx:else bindtap="goShouhuodizhi">
+    <view style=" border-bottom: none;" class="where">{{where}}</view>
+    <view style=" border-bottom: none;" class="name">{{name}} 　　{{phone}}</view>
+  </view>
+
+  <!-- <view>
+    <text>联系人:</text>
+    <input bindinput="getName" placeholder="请填写收货人姓名"></input> 
+  </view>
+  <view>
+    <text>手机号码：</text>
+    <input bindinput="getPhone"  placeholder="请填写收货手机号码"></input> 
+  </view> -->
+
+  <view>
+    <text>货物种类</text>
+    <input maxlength="8" bindinput="getKuaidi" placeholder="请填写种类 如：小电器"></input>
+  </view>
+   <view>
+    <text>取件码:</text>
+    <input maxlength="12" bindinput="getNum" placeholder="请填写快递取件码"></input>
+  </view> 
+  <view>
+    <text>预计重量:</text>
+    <input bindinput="getToWhere" placeholder="单位kg,不足1kg按1kg算"></input>
+  </view>
+  <view>
+    <text>预计体积:</text>
+    <input bindinput="getToWhere" placeholder="XXcm*XXcm*XXcm"></input>
+  </view>
+
+  <view style=" border-bottom: none;">
+    <text>备注:</text>
+    <textarea bindinput="getBeizhu" name="" id="" cols="30" rows="10" placeholder="有什么想告诉代取小哥的可以写在这里哦~"></textarea>
+  </view>
+
+
+
+  <button type="primary" bindtap="addOrder">保存</button>
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+<view class="pay">
+		<text >微信支付</text>
+
+		<text>{{money}}</text>
+  </view>
+ 
+  <button type="primary" bindtap="pay" style="width:750rpx">确认支付</button>
+</action-sheet>
+</view>
+
+
+
