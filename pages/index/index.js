@@ -76,88 +76,23 @@ Page({
 
   goSever01() {
     wx.navigateTo({
-
-      url: '/pages/service01/service01?school=' + "qianjiangwan",
+      url: '/pages/eat1/eat1',
     })
-    //判断用户是否登录
-   
-
-    //判断用户选择的校区
-    // if (school) {
-    //   wx.showToast({
-    //     icon: "none",
-    //     title: '请先选择所在城市',
-    //   })
-    // } else {
-    //   if (this.data.test.default == "杭州") {
-    //     wx.navigateTo({
-
-    //       url: '/pages/service01/service01?school=' + "qianjiangwan",
-    //     })
-    //   } 
-    // }
-
   },
   goSever02() {
     wx.navigateTo({
-
-      url: '/pages/service02/service02?school=' + "qianjiangwan",
+      url: '/pages/service02/service02',
     })
-    //判断用户是否登录
-   
-
-    //判断用户选择的校区
-    // if (school) {
-    //   wx.showToast({
-    //     icon: "none",
-    //     title: '请先选择所在城市',
-    //   })
-    // } else {
-    //   if (this.data.test.default == "杭州") {
-    //     wx.navigateTo({
-
-    //       url: '/pages/service02/service02?school=' + "qianjiangwan",
-    //     })
-    //   } 
-    // }
   },
   goSever03() {
     wx.navigateTo({
       url: '/pages/service03/service03',
     })
-    // //判断用户是否登录
-    // if (school) {
-    //   wx.showToast({
-    //     icon: "none",
-    //     title: '请先选择所在城市',
-    //   })
-    // } else {
-    //   if (this.data.test.default == "杭州") {
-    //     wx.navigateTo({
-    //       url: '/pages/service03/service03?school=0',
-    //     })
-    //   }
-    // }
   },
-
   goSever04() {
     wx.navigateTo({
       url: '/pages/service03/service03',
     })
-  
-    //判断用户是否登录
-    // if (school) {
-    //   wx.showToast({
-    //     icon: "none",
-    //     title: '请先选择所在城市',
-    //   })
-    // } else {
-    //   if (this.data.test.default == "杭州") {
-    //     wx.navigateTo({
-    //       url: '/pages/service03/service03?school=0',
-    //     })
-    //   } 
-    // }
   },
 
   showSchool:function(){

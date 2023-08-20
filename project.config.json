@@ -38,26 +38,7 @@
     "compileType": "miniprogram",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
-    },
+    "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
@@ -68,5 +49,6 @@
         "ignore": [],
         "include": []
     },
-    "appid": "wx13435a3977e73d07"
+    "appid": "wx13435a3977e73d07",
+    "projectname": "HappyGo"
 }
