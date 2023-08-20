@@ -59,14 +59,12 @@
 }
 
 /* /公告栏/ */
-
 .banner {
   height: 480rpx;
   width: 750rpx;
   z-index: 3;
 
 }
-
 .banner image {
   height: 480rpx;
   width: 100%;
@@ -103,22 +101,10 @@
 }
 
 .Sever01 {
-
   float: left;
 }
 
 .Sever02 {
-
-  float: right;
-}
-
-.Sever03 {
-
-  float: left;
-}
-
-.Sever04 {
-
   float: right;
 }
 
@@ -245,10 +231,9 @@
   text-align: center;
   margin-right: 50rpx;
   font-size: 35rpx;
- 
+
 }
 
 .school02 {
   padding: 10rpx;
-
 }
