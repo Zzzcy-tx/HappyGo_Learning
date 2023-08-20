@@ -4,7 +4,6 @@
   padding: 0rpx;
 }
 
-
 .notice-title-backgrd{
   height: 10mm;
   width: 0.01*wx.getSystemInfoSync().windowWidth;
