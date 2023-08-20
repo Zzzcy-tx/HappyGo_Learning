@@ -6,7 +6,7 @@
   <view class="notice-scroll-inner" animation="{{scrollAnimation}}">
     <view class="notice-item">
       <image class="notice-icon" src="/images/notice-icon.png"></image>
-      <text class="notice-text">         重要通知重要通知重要通知重要通知重要通知</text>
+      <text class="notice-text">{{Notice}}</text>
     </view>
   </view>
 </view>
@@ -14,7 +14,6 @@
 
 <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
   interval="3000" circular>
-  <!-- 更新后的版本，可以随时更新数据 -->
   <swiper-item>
     <image src="/img/1.jpg"></image>
   </swiper-item>
@@ -43,19 +42,19 @@
 <view class="chooseService">
   <view bindtap="goSever01" class="Sever01">
     <image src="/img/Sever01.jpg"></image>
-    <text>废旧品回收</text>
+    <text>吃</text>
   </view>
   <view bindtap="goSever02" class="Sever02">
     <image src="/img/sever02.jpg"></image>
-    <text>跑腿服务</text>
+    <text>喝</text>
   </view>
   <view bindtap="goSever03" class="Sever01">
     <image src="/img/Sever03.PNG"></image>
-    <text>我需要帮助</text>
+    <text>玩</text>
   </view>
   <view bindtap="goSever04" class="Sever02">
     <image src="/img/Sever03.PNG"></image>
-    <text>我需要帮助2</text>
+    <text>乐</text>
   </view>
   <!-- <view bindtap="goSever03" class="Sever03">
     <image src="/img/Sever03.jpg"></image>

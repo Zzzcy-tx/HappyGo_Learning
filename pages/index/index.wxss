@@ -1,32 +1,38 @@
 .notice-container {
+  background-color: rgb(255, 250, 178);
   display: flex;
   align-items: center;
   padding: 0rpx;
 }
 
+.overlap-container {
+  position: absolute;
+  width: 11%;
+  height: 8mm;
+  z-index: 1;
+}
+
 .notice-title-backgrd{
+  position:absolute;
   height: 10mm;
-  width: 0.01*wx.getSystemInfoSync().windowWidth;
-  background-color: rgba(255, 255, 255, 1); /* 设置不透明的背景颜色 */
+  width: 100%;
+  background-color: rgb(255, 250, 178); /* 设置不透明的背景颜色 */
 }
 
 .notice-title {
+  position: relative;
+  align-items: center;
   font-size: 20rpx;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   margin-right: 0rpx; /* 适当的间距 */
-  margin-left: 0rpx;
+  margin-left: 10rpx;
   white-space: nowrap; /* 防止子项换行 */
-}
-
-.overlap-container {
-  position: absolute;
-  width: 15mm;
-  height: 8mm;
-  z-index: 2;
 }
 
 .notice-scroll {
   display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   align-items: center;
   white-space: nowrap; /* 防止子项换行 */
   overflow: hidden; /* 隐藏溢出内容 */
@@ -60,6 +66,7 @@
 
 /* /公告栏/ */
 .banner {
+  position: relative;
   height: 480rpx;
   width: 750rpx;
   z-index: 3;

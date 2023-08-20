@@ -14,6 +14,7 @@ Page({
       txt: ["杭州"]
     },
     swiper:[],
+    Notice: "         重要通知:5555555555555555重要通知重要通知重要通知重要通知"
   },
   // 事件处理函数
   bindViewTap() {
@@ -36,29 +37,11 @@ Page({
     })
   },
   onShow: function () {
-    const db = wx.cloud.database();
-    const users = db.collection("Users");
-    users.get()
-      .then(res => {
-        if (res.data.length != 0 && wx.getStorageSync('user')) {
-          this.data.login = true;
-        } else {
-          this.data.login = false;
-        }
-      })
-      .catch(err => {
-        console.log("调用失败", err)
-      })
-
-    console.log(wx.getStorageSync('user'))
-     // 获取公告栏内容宽度
-    wx.createSelectorQuery().select('.notice-scroll-inner').boundingClientRect(rect => {
-      this.setData({
-        scrollWidth: rect.width
-      });
-      this.startScroll();
-    }).exec();
+    this.checkLoginStatus();
+    this.getNoticeScrollWidth();
   },
+
+  
   getUserInfo(e) {
     console.log(e)
 
@@ -68,6 +51,29 @@ Page({
       hasUserInfo: true
     })
   },
+
+  // 检查登录状态
+  checkLoginStatus: function () {
+    const db = wx.cloud.database();
+    const users = db.collection("Users");
+
+    users.get()
+      .then(res => {
+        if (res.data.length !== 0 && wx.getStorageSync('user')) {
+          this.setData({
+            login: true
+          });
+        } else {
+          this.setData({
+            login: false
+          });
+        }
+      })
+      .catch(err => {
+        console.log("调用失败", err);
+      });
+  },
+
   goSever01() {
     wx.navigateTo({
 
@@ -196,9 +202,21 @@ Page({
 
   },
 
+
+
+  // 获取公告栏内容宽度并启动滚动
+  getNoticeScrollWidth: function () {
+    wx.createSelectorQuery().select('.notice-scroll-inner').boundingClientRect(rect => {
+      this.setData({
+        scrollWidth: rect.width
+      });
+      this.startScroll();
+    }).exec();
+  },
+
   startScroll: function () {
     const animation = wx.createAnimation({
-      duration: this.data.scrollWidth * 35, // 根据内容宽度设置滚动速度
+      duration: this.data.scrollWidth * 55, // 根据内容宽度设置滚动速度
       timingFunction: 'linear',
       delay: 0
     });
@@ -212,7 +230,7 @@ Page({
         scrollAnimation: this.data.scrollAnimation.export()
       });
       this.startScroll();
-    }, this.data.scrollWidth * 20);
+    }, this.data.scrollWidth * 15);//两次出现字幕的时间
   },
   
 
